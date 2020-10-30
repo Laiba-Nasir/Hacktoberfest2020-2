@@ -1,14 +1,25 @@
 #include <iostream>  
-using namespace std;  
+using namespace std; 
+ 
 // this is the program for factorial without recursion.
 int main()  
 {  
-   int i,fact=1,number;    
+   int number;    
   cout<<"Enter any Number: ";    
- cin>>number;    
-  for(i=1;i<=number;i++){    
-      fact=fact*i;    
-  }    
-  cout<<"Factorial of " <<number<<" is: "<<fact<<endl;  
+ cin>>number; 
+ int fact=factorial(number);
+ cout<<"Factorial of "<<number<<" is "<<fact<<endl;   
+  
   return 0;  
 }  
+int factorial(int n){
+  if(n>1)
+  return n*factorial(n-1);
+  else
+ return 1;
+  
+}
+  
+  
+
+  
